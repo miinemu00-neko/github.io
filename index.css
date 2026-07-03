@@ -1,8 +1,8 @@
 @charset "UTF-8";
 body {
-    background: url("background.png") no-repeat center center fixed;
+    background: url("background.png") no-repeat center center;
     background-size: cover;
-    background-color: #812990; /* 画像が読み込まれない場合の補助色 */
+    background-color: #812990;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -105,15 +105,23 @@ h2, h3, h4 {
     background: rgba(255, 255, 255, 0.35);
     border-radius: 8px;
     padding: 15px;
-    width: calc(33.333% - 20px); /* 3列 */
+    width: calc(33.333% - 20px);
+    max-width: 320px;
     box-sizing: border-box;
+
+    border: 2px solid #C8A2C8; 
+}
+
+.video-card:hover {
+    box-shadow: 0 0 12px rgba(200, 162, 200, 0.6);
 }
 
 /* YouTube埋め込みをレスポンシブに */
 .youtube-wrap {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* 16:9 */
+    padding-bottom: 56.25%;
+    min-height: 0;
     margin-bottom: 10px;
 }
 
@@ -133,7 +141,9 @@ h2, h3, h4 {
 /* スマホ対応 */
 @media screen and (max-width: 767px) {
     .video-card {
-        width: 100%; /* 1列にする */
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
     }
 }
 
