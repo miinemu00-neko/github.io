@@ -1,139 +1,167 @@
 @charset "UTF-8";
 body {
-	background: #812990;
-	margin: 0;
-	padding: 0;
-	line-height: 1.6;
+    background: url("background.png") no-repeat center center fixed;
+    background-size: cover;
+    background-color: #812990; /* 画像が読み込まれない場合の補助色 */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+    "Noto Sans JP", sans-serif;
+
+    color: #3C3C3C;
+    font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+               "Noto Sans JP", sans-serif;
 }
 #outer {
 }
 header {
-	padding: 10px 20px;
-	height: 94px;
-	position: relative;
-	z-index: 4;
-    background: linear-gradient(to bottom, rgba(110, 0, 0, 1), rgba(110, 0, 0, 1));background-size: auto;
+    padding: 10px 20px;
+    height: 94px;
+    position: relative;
+    z-index: 4;
+    background-color: rgba(255, 255, 255, 0.30);  /* 背景画像に馴染む半透明ヘッダー */
+    backdrop-filter: blur(4px);
 }
 #header-inner {
-	margin: 0 auto;
-	max-width: 1000px;
+    margin: 0 auto;
+    max-width: 1000px;
 }
 .description {
-	padding-left: 10px;
-	line-height: 1.2;
+    padding-left: 10px;
+    line-height: 1.2;
 }
 #container {
-	margin: 0 auto;
-	max-width: 1000px;
-	background-color: #fff;
-	position: relative;
-	z-index: 1;
-	padding: 20px;
+    margin: 0 auto;
+    max-width: 1000px;
+    background-color: rgba(255, 255, 255, 0.30); /* 背景が透ける白 */
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    border-radius: 8px;
 }
 #text {
-	padding: 0 20px 0 0;
+    padding: 0 20px 0 0;
 }
 ul {
-	margin: 0 0 0 1em;
-	padding: 0;
+    margin: 0 0 0 1em;
+    padding: 0;
 }
 li {
-	list-style: none;
+    list-style: none;
 }
 p {
-	margin: 1em 0;
+    margin: 1em 0;
 }
 img {
-	max-width: 100%;
-	height: auto;
-	border: 0;
+    max-width: 100%;
+    height: auto;
+    border: 0;
 }
 hr {
-	border-width: 1px 0 0 0;
-	border-style: solid;
-	border-color: #ccc;
-	height: 1px;
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: #ccc;
+    height: 1px;
 }
 body a {
-	font-weight: normal;
+    font-weight: normal;
 }
 h1 {
-	color: #fff;
-	font-size: 28px;
-	padding: 20px 0 0 0;
-	margin: 0;
+    color: #812990;
+    font-size: 35px;
+    font-family: "Noto Serif JP", serif;
+    padding: 20px 0 0 0;
+    margin: 0;
 }
 h1 a {
-	font-weight: bold;
-	color: #fff;
-	text-decoration: none;
+    font-weight: bold;
+    color: #812990;
+    font-family: "Noto Serif JP", serif;
+    text-decoration: none;
 }
 h1 a:hover {
-	font-weight: bold;
-	color: #ffffff;
-	text-decoration: underline;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: "Noto Serif JP", serif;
+    text-decoration: underline;
 }
 h2, h3, h4 {
-	font-size: 28px;
-	margin: 4px 0 0 0;
-	padding: 9px 0 7px 0;
+    font-size: 28px;
+    margin: 4px 0 0 0;
+    padding: 9px 0 7px 0;
+    font-family: "Noto Serif JP", serif;
 }
+.youtube-wrap {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 = 9 / 16 * 100 */
+    margin: 20px 0;
+}
+
+.youtube-wrap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
 main {
 }
 aside {
 }
 .side-title {
-	background: #f1f1f1;
-	font-weight: bold;
-	border: 1px solid #ccc;
-	margin-bottom: 10px;
-	padding: 10px 20px;
-    border-radius:3px;
+    background: #f1f1f1;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    border-radius: 3px;
 }
 .side {
-	margin: 0 0 10px 0;
-	padding: 2px 8px 8px 7px;
+    margin: 0 0 10px 0;
+    padding: 2px 8px 8px 7px;
 }
 aside a {
     color: #3b5998;
     text-decoration: none;
-  }
+}
 aside a:hover {
-	color:#0000ee;
+    color: #0000ee;
     text-decoration: underline;
-  }
+}
 footer {
-    background-color: #fff;
-	padding-top: 20px;
-	font-size: 12px;
-	height: 100px;
-	clear: both;
-	text-align: center;
+    background-color: rgba(255, 255, 255, 0.30);
+    padding-top: 20px;
+    font-size: 12px;
+    height: 100px;
+    clear: both;
+    text-align: center;
 }
 blockquote {
-	border: 1px solid #ccc;
-	padding: 5px;
-	margin: 10px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 10px;
 }
 @media screen and (max-width: 767px) {
-#header-inner {
-	margin: 0;
-	max-width: 100%;
-}
-  main {
-    width: 100%;
-  }
-
-  aside {
-    width: 100%;
-  }
-  #container {
-    display: block;
-    	margin: 0;
-	max-width: 100%;
-  }
-  h1 {
-    font-size: 24px;
-    padding: 10px 0;
-  }
-}
+    #header-inner {
+        margin: 0;
+        max-width: 100%;
+    }
+    main {
+        width: 100%;
+    }
+    aside {
+        width: 100%;
+    }
+    #container {
+        display: block;
+        margin: 0;
+        max-width: 100%;
+    }
+    h1 {
+        font-size: 24px;
+        padding: 10px 0;
+    }
