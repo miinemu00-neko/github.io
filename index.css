@@ -15,14 +15,19 @@ body {
 }
 #outer {
 }
+
 header {
     padding: 10px 20px;
     height: 62px;
-    position: relative;
-    z-index: 4;
-    background-color: rgba(255, 255, 255, 0.30);  /* 背景画像に馴染む半透明ヘッダー */
+    position: fixed;     /* ← これを追加 */
+    top: 0;              /* ← 画面上部に固定 */
+    left: 0;
+    width: 100%;         /* ← 横幅を画面いっぱいに */
+    z-index: 1000;       /* ← 他の要素より前に出す */
+    background-color: rgba(255, 255, 255, 0.30);
     backdrop-filter: blur(4px);
 }
+
 #header-inner {
     margin: 0 auto;
     max-width: 1000px;
@@ -32,7 +37,7 @@ header {
     line-height: 1.2;
 }
 #container {
-    margin: 0 auto;
+    margin: 62px auto 0;
     max-width: 1000px;
     background-color: rgba(255, 255, 255, 0.30); /* 背景が透ける白 */
     position: relative;
@@ -199,8 +204,14 @@ blockquote {
         display: block;
         margin: 0;
         max-width: 100%;
+        margin-top: 60px
     }
     h1 {
         font-size: 24px;
         padding: 10px 0;
     }
+    header {
+        height: 52px; 
+        padding: 6px 20px;
+    }
+}
