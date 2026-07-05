@@ -42,7 +42,7 @@ header {
     background-color: rgba(255, 255, 255, 0.30); /* 背景が透ける白 */
     position: relative;
     z-index: 1;
-    padding: 20px;
+    padding: 25px;
     border-radius: 8px;
 }
 #text {
@@ -92,10 +92,31 @@ h1 a:hover {
     text-decoration: underline;
 }
 h2, h3, h4 {
-    font-size: 28px;
+    font-size: 20px;
     margin: 4px 0 0 0;
     padding: 9px 0 7px 0;
     font-family: "Noto Serif JP", serif;
+}
+
+.section {
+    padding: 10px 20px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+}
+
+.section-new {
+    background: rgba(200, 162, 200, 0.25);
+    backdrop-filter: blur(3px);
+}
+
+.section-ranking {
+    background: rgba(255, 255, 255, 0.35);
+    border-left: 6px solid #C8A2C8;
+}
+
+.section-official {
+    background: rgba(129, 41, 144, 0.20);
+    backdrop-filter: blur(3px);
 }
 
 /* カード全体を横並びにする */
